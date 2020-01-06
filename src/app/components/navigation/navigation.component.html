@@ -1,0 +1,29 @@
+<div class="component" id="navigation">
+  <button mat-fab color="primary" [matMenuTriggerFor]="navigationMenu" aria-label="Menu icon button">
+    <mat-icon>menu</mat-icon>
+  </button>
+
+  <mat-menu #navigationMenu="matMenu">
+    <button mat-menu-item disabled>Select to navigate</button>
+    <button mat-menu-item (click)="scrollTo('introduction')">
+      <mat-icon>person</mat-icon>
+      <span>Introduction</span>
+    </button>
+    <button mat-menu-item (click)="scrollTo('employment-history')">
+      <mat-icon>work</mat-icon>
+      <span>Employment History</span>
+    </button>
+    <button mat-menu-item (click)="scrollTo('technologies')">
+      <mat-icon>widgets</mat-icon>
+      <span>Technologies</span>
+    </button>
+    <button mat-menu-item (click)="scrollTo('projects')">
+      <mat-icon>devices</mat-icon>
+      <span>Projects</span>
+    </button>
+    <button mat-menu-item (click)="scrollTo('contact')">
+      <mat-icon>contact_mail</mat-icon>
+      <span>Contact</span>
+    </button>
+  </mat-menu>
+</div>
